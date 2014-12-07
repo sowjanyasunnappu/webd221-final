@@ -1,0 +1,736 @@
+ // ------------- import less files -------------
+
+ @import "variables.less";
+
+// --------- global styles ---------
+
+*, 
+*:before, 
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: @main-font;
+	font-size: @font-size-base;
+	color: @text-color;
+	font-weight: 400;
+	line-height: 26px;
+	background-color: @white;
+}
+
+.contain {
+	max-width: @gridsystem-width;
+	width: @total-width;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden; 
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+
+	li {
+		display: inline-block;
+	}
+}
+
+p {
+	font-size: 16px;
+	text-align: center;
+}
+
+h1 {
+	font-weight: 500;
+}
+
+h2 {
+	font-weight: 500;
+	font-size: @font-size-h2;
+	color: @dark;
+}
+
+h3 {
+	font-weight: 500;
+	color: @light-grey;
+	font-size: @font-size-h3;
+}
+
+h4 {
+	font-weight: 500;
+	font-size: @font-size-h4;
+}
+
+h5 {
+	font-weight: 500;
+}
+
+.fa {
+	color: @light-orange;
+}
+
+
+
+// ------------- nav -------------
+
+#logo {
+	width: 200px;
+	float: left;
+	margin: 0;
+	font-size: 22px;
+
+	a {
+		text-decoration: none;
+		color: @dark;
+	}
+}
+
+.highlight {
+		color: @light-orange;
+	}
+
+.clearfix:after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+nav {
+	background-color: @white;
+	margin-top: 30px;
+	padding-bottom: 20px;
+
+	ul {
+	   float: right;
+
+	a {
+		text-decoration: none;
+		font-size: 15px;
+		font-weight: 500;
+		margin-right: 30px;
+		text-transform: uppercase;
+		color: @dark;
+		display: inline-block;
+
+		&:visited {
+			color: @dark;
+		}
+
+		&:hover, &.active {
+			color: @dark;
+		display: inline-block;
+			background: url("../images/underline.png");
+				background-repeat: no-repeat;
+				background-position: center;
+				padding-bottom: 24px;
+		}
+	}
+
+	.fa-bars {
+		display: none;
+	}
+
+	#menu {
+		display: inline;
+		float: right;
+		margin: 0;
+		list-style-type: none;
+	}
+}
+
+	h1 {
+		float: left;
+		margin: 0;
+	}
+
+	#right-panel-link {
+		float: right;
+		display: none;
+	}
+
+}
+
+// ------------- header -------------
+
+header {
+	height: 586px;
+	padding-top: 58px;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+
+.bxslider {
+	
+	max-width: 100%;
+	position: relative;
+	max-height: 670px;
+
+		li {
+			position: relative;
+			margin: 0 auto;
+			width: 100%;
+			padding: 0;
+
+		img {
+			width: 100%;
+			// height: auto;
+			display: block;
+		}
+	}
+}
+
+#ads {
+	position: absolute;
+	width: 100%;
+	top: 35%;
+
+	h2 {
+		height: 50px;
+		line-height: 50px;
+		width: 370px;
+		margin-bottom: 15px;
+		background: rgba(0,0,0,0.4);
+		margin: 0 auto;
+		color: @white;
+	}
+
+	h3 {
+		height: 50px;
+		line-height: 50px;
+		width: 470px;
+		background: rgba(0,0,0,0.4);
+		margin: 0 auto;
+	}
+	
+	 p {
+		font-size: 16px;
+		color: @white;
+	}
+}
+
+#header-bar {
+	background-color: @orange;
+	height: 100px;
+	line-height: 100px;
+	font-size: 20px;
+	color: @white;
+	margin-top: 0;
+
+	a {
+		color: #fff;
+		font-size: 24px;
+		text-transform: uppercase;
+		text-decoration: underline;
+		text-decoration-color: @orange; 
+	}
+}
+
+
+// ------------- features -----------
+
+
+#features {
+	margin-top: 50px;
+	text-align: left;
+
+	h2 {
+		margin-bottom: 40px;
+	}
+
+	p {
+		margin-bottom: 55px;
+	}
+
+
+	.feature-column {
+
+		.fa {
+			font-size: 30px;
+		}
+		
+		h3 {
+			color: @dark;
+		}
+
+		p {
+			text-align: left;
+			line-height: 18px;
+		}
+			
+			.column(3)
+		}
+}
+
+	.underline {
+		border-bottom: 2px solid @light-orange;
+	}
+
+// ------------- projects -----------
+
+#projects {
+	text-align: left;
+
+	h2 {
+		margin-bottom: 23px;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	.feature-column {
+		margin-top: 30px;
+		.column(3)
+	}
+}	
+	
+	#portfolio-label {
+		background-color: @light-grey;
+		padding: 0px 18px;
+		color: @dark;
+		text-align: right;
+		border: solid 1px #dcd5d5;
+		line-height: 0px;
+
+		h4 {
+			color: @light-orange;
+		}
+
+		p {
+			text-align: right;
+		}
+
+		.line-separator{
+			height:1px;
+			border-bottom:1px solid #dcd5d5;
+		}
+	}
+
+// ------------- about us -------------
+
+#header {
+
+	#new-ads {
+		.column(12);
+		height: 490px;
+		width: 100%;
+		background-image: url(../images/1.jpg);
+		background-size: cover;  
+		background-repeat: no-repeat;
+		padding-top: 120px;
+
+		.tagline {
+			font-size: 60px;
+			color: @white;
+			font-weight: 400;
+		}
+	
+		p {
+			font-size: 16px;
+			color: @white;
+			padding-top: 30px;
+
+		}
+	}
+}
+
+#about {
+	padding: 40px 0 55px 0;
+
+	h2 {
+		color: @dark;
+	}
+
+	p {
+		font-size: 16px;
+		text-align: center;
+		.column(12)
+	}
+}
+
+#team {
+	padding: 33px 0 50px 0;
+	background-color: @light-grey;
+
+	.feature-column {
+			margin-top: 30px;
+			.column(3);
+		}
+
+		img {
+			max-width: 225px;
+		}
+
+		h3 {
+			color: @dark;
+			line-height: 0;
+		}
+
+		h4 {
+			line-height: 24px;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 20px;
+		}
+}
+
+#mission {
+	padding: 38px 0 0px 0;
+
+	#about-mission {
+	.column(6);
+	// padding-right: 
+	}
+
+	h2 {
+		text-align: left;
+	}
+
+	p {
+		font-size: 14px;
+		text-align: left;
+	}
+
+	img {
+		width: 50%;
+		float: left;
+		.column(6);
+		padding-top: 38px;
+	}
+}
+
+// ------------- portfolio -------------
+
+.tagline {
+		font-size: 60px;
+		color: @white;
+		font-weight: 400;
+	}
+	
+#portfolio {
+	margin: 40px 0 88px 0;
+
+	h2 {
+		color: @dark;
+	}
+
+	p {
+		font-size: 14px;
+		width: 96%;
+		text-align: center;
+		line-height: 25px;
+		.column(12);
+	}
+}
+
+.portfolio-nav {
+	.column(12);
+	margin-top: 60px;
+	
+	li {
+		list-style-type: none;
+		padding-right: 40px;
+		font-size: 14px;
+		float: left;
+	}
+	
+		a {
+			text-decoration: none;
+			color: @grey;
+
+
+			&:hover {
+				border: 2px solid  #dcd5d5;
+				padding: 6px;
+				background-color: #eaeaea;
+				border-radius: 3px;
+			}
+		}
+	}
+
+.gallery {
+	.column(12);
+	width: 100%;
+	margin: 0 auto;
+
+	li {
+		.column(3);
+		margin-top: 35px;
+		position: relative;
+		list-style-type: none;
+	}
+
+	.overlay {
+		position: absolute;
+		z-index: 10;
+		bottom: 8px;
+		width: 100%;
+		height: 95%;
+		padding: 40px 40px;
+		color: @white;
+		text-decoration: none;
+		text-align: center;
+		background: rgba(14, 180, 147, 0.9);
+		opacity: 0;
+
+		&:hover {
+				opacity:0.6;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.fa {
+			display: block;
+			font-size: 42px;
+			width: 36px;
+			padding-top: 10%;
+			margin: 0 auto;
+		}
+
+		p {
+		  	color: #fff;
+		  	text-align: center;
+			padding-top: 20px;
+		}
+    }
+}
+
+
+
+// ------------- footer -------------
+
+footer {
+	height: 56px;
+	margin-top: 66px;
+	font-size: 14px;
+	background-color: @light-orange;
+	color: @white;
+	line-height: 56px;
+}
+
+// ------------- Media Queries -------------
+
+
+@media screen and (max-width: 1076px) {
+
+	nav {
+		display: block;
+		padding: 10px 30px;
+	}
+
+	#mission p {
+		max-width: 450px;
+	}
+}
+
+@media screen and (max-width: 915px) {
+	
+	nav {
+		display: none;
+	}
+
+	 nav #menu {
+	 	display: block;
+		padding: 20px;
+		color: @dark;
+	}
+	
+	nav ul li {
+		display: inline-block;
+	}
+
+	h1 {
+		padding: 20px;
+	}
+
+	.tile-item {
+    	max-width: 200px;
+    }
+
+    #portfolio-label  {
+		p {
+			display: none;
+		}
+
+		h4 {
+			font-size: 12px;
+			text-align: center;
+			padding: 0;
+		}
+   }
+
+}
+
+@media screen and (max-width: 600px) {
+	
+	#header {
+		display: none;
+	}
+	
+	body {
+		font-size: 12px;
+	}
+
+	#features {
+
+		h2 {
+			font-size: 20px;
+		}
+
+		h3 {
+			font-size: 16px;
+			line-height: 16px;
+		}
+
+		.fa {
+			font-size: 16px;
+		}
+
+		p {
+			font-size: 13px;
+		}
+	}
+
+	#mission {
+
+		img {
+			display: none;
+		}
+
+		p {
+			width: 550px;
+			text-align: center;
+		}
+
+		h2 {
+			text-align: center;
+		}
+	}
+
+	#portfolio-label  {
+		p {
+			display: none;
+		}
+
+		h4 {
+			font-size: 10px;
+			text-align: center;
+			padding: 0;
+		}
+   }
+
+}
+
+@media screen and (max-width: 450px) {
+	
+	#header {
+		display: none;
+	}
+
+	#portfolio-label  {
+
+		p {
+			display: none;
+		}
+
+		h4 {
+			font-size: 10px;
+			padding: 0;
+			text-align: center;
+		}
+   }
+
+	#mission {
+
+		img {
+			display: none;
+		}
+
+		p {
+			width: 280px;
+			text-align: center;
+		}
+
+		h2 {
+			text-align: center;
+		}
+	}
+
+	#mission 
+	h2 {
+		font-size: @font-size-h4;
+	}
+
+	// .bxslider {
+	// 	height: 320px;
+	// }
+
+	// #header-bar  {
+	// 	margin: 0 auto;
+	// 	p {
+	// 		font-size: 12px;
+	// 	}	
+
+	// 	a {
+	// 		font-size: 14px;
+	// 	}
+	// }
+	
+	#features {
+
+		h2 {
+			font-size: 20px;
+		}
+
+		h3 {
+			font-size: 16px;
+			line-height: 16px;
+		}
+
+		.fa {
+			font-size: 16px;
+		}
+
+		p {
+			font-size: 13px;
+		}
+	}
+
+	#portfolio-label  {
+
+		p {
+			display: none;
+		}
+
+		h4 {
+			font-size: 10px;
+			text-align: center;
+			padding: 0;
+		}
+   }
+
+	#portfolio {
+		text-align: center;
+	}
+}
+
+
+
+
+
